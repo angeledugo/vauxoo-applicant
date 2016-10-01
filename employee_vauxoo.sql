@@ -73,3 +73,8 @@ INSERT into employee_hobby_pivot(employee_id, hobby_id) VALUES (3,1);
 
 INSERT into employee_hobby_pivot(employee_id, hobby_id) VALUES (4,3);
 INSERT into employee_hobby_pivot(employee_id, hobby_id) VALUES (4,1);
+
+
+-- SE ADICIONA EL CAMPO ID_JEFE
+ALTER TABLE employee add COLUMN id_jefe INT4;
+ALTER TABLE employee add CONSTRAINT id_department_fkey FOREIGN KEY (id_jefe) REFERENCES employee(id);

@@ -4,12 +4,35 @@
 --       Consider add ';' at end sentence.
 
 CREATE TABLE employee (
+  id INT4 PRIMARY KEY,
+  first_name VARCHAR(80),
+  last_name VARCHAR(80)
 );
 
 CREATE TABLE employee_department (
+  id INT4 PRIMARY KEY,
+  name VARCHAR(80),
+  description VARCHAR(150)
 );
 
 CREATE TABLE employee_hobby (
 );
 
--- ...
+
+ALTER TABLE employee add COLUMN id_department INT4;
+ALTER TABLE employee add CONSTRAINT id_department FOREIGN KEY (id_department) REFERENCES employee_department(id);
+
+
+-- se insertan registros para la tabla employee_department
+INSERT INTO employee_department(id, name, description) VALUES (1,'Administracion','Departamento administrativo');
+INSERT INTO employee_department(id, name, description) VALUES (2,'RRHH','Departamento relaciones Humanas');
+INSERT INTO employee_department(id, name, description) VALUES (3,'Informatica','Departamento Informatico para tecnologia de la informacion');
+INSERT INTO employee_department(id, name, description) VALUES (4,'Presupuesto','Departamento de presupuesto');
+INSERT INTO employee_department(id, name, description) VALUES (5,'Prensa','Departamento de prensa y comunicacion');
+INSERT INTO employee_department(id, name, description) VALUES (6,'Coordinacion General','Departamento de coordinacion General de Operaciones');
+
+-- se insertan registros para la tabla employee
+INSERT INTO employee(id, first_name, last_name,id_department) VALUES (1,'Angel','Gonzalez',3);
+INSERT INTO employee(id, first_name, last_name,id_department) VALUES (2,'Pedro','Perez',1);
+INSERT INTO employee(id, first_name, last_name,id_department) VALUES (3,'Carlos','Gonzalez',2);
+INSERT INTO employee(id, first_name, last_name,id_department) VALUES (4,'Daniel','Rojas',4);

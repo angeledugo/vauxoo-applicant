@@ -1,16 +1,27 @@
 """
-Your module documentation here
+Modulo que se encarga de tratado de numeros
 """
 
 
 class PrimeClass(object):
     """
-    Your class documentation here
+    En esta clase trabajaremos los numeros
     """
-
     def is_prime(self, num_int):
         """
-        Your method documentation here
+        Funcion que determina si un numero es primo
+        debe recibir un numero entero
         """
-        # your primes code here
-        return "not implement yet"  # Remove this dummy line
+        # pylint: disable=C0103
+        rango = range(2, num_int)
+        if num_int == 1:
+            return False
+        elif num_int == 2:
+            return True
+        else:
+            for elementos in rango:
+                if num_int % elementos == 0:
+                    return False
+                else:
+                    if elementos == num_int - 1:
+                        return True

@@ -15,6 +15,7 @@ class CalculatorClass(object):
         lista = num_list
         suma = 0
         # pylint: disable=C0103
-        for n in lista:
-            suma += n
-            return suma
+        for i in range(0, len(lista)):
+            suma = suma+lista[i]
+
+        return sum

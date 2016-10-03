@@ -26,7 +26,7 @@ ALTER TABLE employee add COLUMN id_department INT4;
 ALTER TABLE employee add CONSTRAINT id_department FOREIGN KEY (id_department) REFERENCES employee_department(id);
 
 
--- se insertan registros para la tabla employee_department
+-- records are inserted for the table employee_department
 INSERT INTO employee_department(id, name, description) VALUES (1,'Administracion','Departamento administrativo');
 INSERT INTO employee_department(id, name, description) VALUES (2,'RRHH','Departamento relaciones Humanas');
 INSERT INTO employee_department(id, name, description) VALUES (3,'Informatica','Departamento Informatico para tecnologia de la informacion');

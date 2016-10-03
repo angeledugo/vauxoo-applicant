@@ -1,16 +1,14 @@
 """
-Modulo que se encarga de tratado de numeros
+Module that handles numbers treaty
 """
 
 
 class PrimeClass(object):
-    """
-    En esta clase trabajaremos los numeros
+    """In this class we will work numbers
     """
     def is_prime(self, num_int):
-        """
-        Funcion que determina si un numero es primo
-        debe recibir un numero entero
+        """Function that determines whether a number is prime you must receive
+        an integer return boolean
         """
         # pylint: disable=C0103
         rango = range(2, num_int)

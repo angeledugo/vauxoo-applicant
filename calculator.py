@@ -1,19 +1,20 @@
 """
-Modulo creado para crear operaciones numericas
+Modulo created to create numerical operations
 """
 
 
 class CalculatorClass(object):
-    """Clase permite ejecutar metodos que simulan el proceso
-    de operaciones de  una calculadora
+    """Class allows you to execute methods that simulate the process
+    operations calculator
     """
 
     def sum(self, num_list):
-        """este metodo recibe una lista y nos permite sumar cada uno de
-        sus numeros
+        """This method receives a list and adds each of
+        the values of that list. return number
         """
+        lista = num_list
         suma = 0
         # pylint: disable=C0103
-        for n in num_list:
+        for n in lista:
             suma += n
             return suma

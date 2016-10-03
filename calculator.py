@@ -12,10 +12,9 @@ class CalculatorClass(object):
         """This method receives a list and adds each of
         the values of that list. return number
         """
-        lista = num_list
         suma = 0
         # pylint: disable=C0103
-        for i in range(0, len(lista)):
-            suma = suma+lista[i]
+        for i in range(0, len(num_list)):
+            suma = suma+num_list[i]
 
-        return sum
+        return suma
